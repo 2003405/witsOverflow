@@ -3,12 +3,14 @@ node_js:
   - 17.8.0
 cache: npm
 
+before_install:
+  - npm i -g npm@17.8.0
+  
 install:
   - npm install
 
 script:
-  - npm test
-  - npm run build
+  - make test
 
 deploy:
   provider: pages
