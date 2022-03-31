@@ -1,3 +1,20 @@
 language: node_js
 node_js:
-  - 17.8.0
+  - 17
+cache: npm
+
+before_install:
+  - npm i -g npm@17
+
+install:
+  - npm install
+
+script:
+  - make test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
