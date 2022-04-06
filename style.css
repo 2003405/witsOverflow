@@ -24,6 +24,51 @@
     align-items: center;
     text-decoration: none;
     color: gray;
+}
+
+.account-container{
+    width: 75%;
+    height: 90%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px -5px rgba(76, 75, 75, 0.75);
+    padding: 35px;
+}
+
+.account-container .row:not(:first-child), .account-container .row:not(:last-child){
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    
+}
+
+.account-container .row:last-child{
+    border-bottom: none;
+}
+
+.account-container .row:first-child{
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+}
+
+.container-fluid{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group{
+    width: 440px;
+}
+
+.delete-account a{
+    text-decoration: none;
+    color: var(--bs-body-color);
+}
+
 .custom-btn{
     width: 160px;
     height: 45px;
