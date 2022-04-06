@@ -24,4 +24,15 @@
     align-items: center;
     text-decoration: none;
     color: gray;
+.custom-btn{
+    width: 160px;
+    height: 45px;
+    color: white;
+    font-weight: 700;
+    background: #1aa3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-decoration: none;
 }
