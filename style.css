@@ -70,9 +70,10 @@
 }
 
 .custom-btn{
-    width: 160px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     color: white;
+    margin-right: 350px;
     font-weight: 700;
     background: #1aa3ff;
     display: flex;
@@ -82,16 +83,32 @@
     text-decoration: none;
 }
 
-.custom-btn2{
-    width: 150px;
-    height: 40px;
-    color: white;
-    margin-right: 400px;
-    font-weight: 700;
-    background: #1aa3ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    text-decoration: none;
+.title{
+    height: 50px;
+    width: 550px; 
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em; 
+    margin: 20px 300px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.question{
+    height: 400px;
+    width: 550px; 
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em; 
+    margin: 20px 300px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    box-sizing: border-box;
 }
