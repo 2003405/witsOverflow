@@ -93,3 +93,32 @@
   
 
 
+.SignUpBtn {
+    display: inline-flex;
+    height: 30px;
+    padding: 0;
+    top: 7px;
+    left: 7px;
+    position: relative;
+    background: #007bff;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.SignUpBtn:hover {
+    background: #2248e2;
+    color: white !important;
+    font-size: 17px;
+}
+
+.SignUpBtn:active {
+    background: #1936aa;
+}
+
