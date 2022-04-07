@@ -4,16 +4,27 @@
     position: fixed;        
     
 }
-
+a:hover{
+    color: white;
+}
 .navbar-nav a{
     padding-left: 15px !important;
     padding-right: 15px !important;
     transition: 0.15s;
 }
 
+.btn-login{
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
 .navbar-nav a:hover{
     color: #007bff !important;
     font-size: 17px;
+}
+
+a.btn-login:hover, a.btn-signup:hover{
+    color: white !important;
 }
 
 .navbar-brand{
@@ -88,59 +99,79 @@
     border-radius: 6px;
     text-decoration: none;
 }
-.d-flextq{
-    
-    color: #007bff;
-    font-weight: 700;
-    background: white;
-    justify-content: flex-start;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    padding-top:0.25cm;
-    padding-left:1cm;
-    padding:0.25cm;
-    text-decoration: none;
+
+.top-questions-container{
+    margin: 50px auto;
+    width: 90%;
 }
 
-.askq{
-    color: #007bff;
-    font-weight: 700;
-    background: white;
+
+.list-group{
+    width: 100%;
+    margin: 30px auto;
+}
+
+.list-group a{
+    padding: 15px;
+}
+
+.buttons-container{
+    margin-right: 40px;
     justify-content: center;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    padding-top:0.25cm;
-    padding-left:1cm;
+    align-items: center;
+}
+
+.votes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(210,8%,45%);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    width: 90px;
+}
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hsl(140,40%,55%);
+    border-radius: 4px;
+    text-align: center;
+    width: 90px;
+}
+
+.answers-container p{
+    color: white;
+}
+
+
+.votes-container p, .answers-container p{
+    margin: 0;
+}
+
+.function-buttons-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.function-buttons-container a{
+    margin: 10px;
+    border-radius: 4px;
     text-decoration: none;
-
+    font-weight: 600;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
 }
 
-.SignUpBtn {
-    display: inline-flex;
-    height: 30px;
-    padding: 0;
-    top: 7px;
-    left: 7px;
-    position: relative;
-    background: #007bff;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    overflow: hidden;
-    font-weight: 800;
-    cursor: pointer;
-    padding: 0 10px;
-    color: black;
-    text-decoration: none;
+.btn-ask-question{
+    background: #0d6efd;
+    color: white;
 }
-
-.SignUpBtn:hover {
-    background: #2248e2;
-    color: white !important;
-    font-size: 17px;
-}
-
-.SignUpBtn:active {
-    background: #1936aa;
-}
-
