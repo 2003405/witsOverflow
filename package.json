@@ -1,4 +1,23 @@
-{ 
-    "name": "test-project"
+{
+  "name": "login",
+  "description": "An online forum that allows users to ask, answer, vote, mark and moderate questions and answers, as well as earn achievements for participation",
+  "version": "1.0.0",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2003405/witsOverflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2003405/witsOverflow/issues"
+  },
+  "homepage": "https://github.com/2003405/witsOverflow#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql": "^2.18.1"
   }
-  
+}
