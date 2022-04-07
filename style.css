@@ -8,14 +8,17 @@
 .navbar-nav a{
     padding-left: 15px !important;
     padding-right: 15px !important;
+    transition: 0.15s;
 }
 
 .navbar-nav a:hover{
     color: #007bff !important;
+    font-size: 17px;
 }
 
 .navbar-brand{
     margin-right: 40px;
+    font-weight: 700;
 }
 
 .nav-item.nav-link.active{
