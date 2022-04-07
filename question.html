@@ -28,31 +28,18 @@
 
         </nav>
         <div class="input-group">
-                <form>
-                    <textarea type="text" id="input" placeholder="Type Question..."></textarea>
-                </form>
+            <!-- title and question input -->
+            <form>
+                <p style="font-family:Courier; font-size: 15px; position: relative;left:300px; top:10px;">Title:</p>
+                <textarea class="title" type="text" id="title" placeholder="Type title..."></textarea>
+                <p style="font-family:Courier; font-size: 15px; position: relative;left:300px; top:10px;">Question:</p>
+                <textarea class="question" type="text" id="question" placeholder="Type Question..."></textarea>
+            </form>
             <span class="input-group-btn" >
          </span>
         </div>
             <div class="row d-flex flex-row-reverse">
-                    <a class="custom-btn2">Post Question</a>
+                    <a class="custom-btn">Post Question</a>
             </div>
     </body>
-    <style>
-        textarea[type=text], select {
-            height: 400px;
-            width: 550px; 
-            text-align: left;
-            padding-left:0;
-            padding-top:0;
-            padding-bottom:0.4em;
-            padding-right: 0.4em; 
-            margin: 20px 20px;
-            border: 3px solid #ccc;
-            border-radius: 4px;
-            text-align: left;
-            box-sizing: border-box;
-        }
-
-    </style>
 </html>
