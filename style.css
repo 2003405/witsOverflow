@@ -11,11 +11,15 @@
 }
 
 .navbar-nav a:hover{
-    color: #198754 !important;
+    color: #007bff !important;
 }
 
 .navbar-brand{
     margin-right: 40px;
+}
+
+.nav-item.nav-link.active{
+    color: #007bff !important;
 }
 
 .fa.fa-navicon{
