@@ -78,12 +78,6 @@ a.btn-login:hover, a.btn-signup:hover{
     margin-bottom: 8px;
 }
 
-.container-fluid{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .form-group{
     width: 440px;
@@ -99,7 +93,7 @@ a.btn-login:hover, a.btn-signup:hover{
     height: 45px;
     color: white;
     font-weight: 700;
-    background: #1aa3ff;
+    background: #0d6efd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,17 +177,41 @@ a.btn-login:hover, a.btn-signup:hover{
     color: white;
 }
 
-.wrapper {
-    margin: 0 auto;
-    width: 1000px;
-    
+.avatar-header{
+    margin-top: 30px;
 }
 
-.img-dp{
-    margin-top: 50px;
-    width: 250px;
-    height: 250px;
-    background-image: url(img/defaultDP.png);
-    background-size: 100%;
+.user-avatar{
+    width: 85px;
+    height: 85px;
+    border: 1px rgb(201, 204, 207) solid;
     border-radius: 50%;
+    padding: 3px;
+}
+
+.img-container{
+    align-items: center;
+}
+
+.img-container a{
+    margin-left: 25px;
+    transition: .2s;
+
+}
+
+.upload-button, .remove-button{
+    border: 1px solid #ced4da;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.img-container a:hover{
+    border: 1px solid #0d6efd;
+    background: #0d6efd
 }
