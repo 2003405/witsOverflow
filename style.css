@@ -175,3 +175,18 @@ a.btn-login:hover, a.btn-signup:hover{
     background: #0d6efd;
     color: white;
 }
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    
+}
+
+.img-dp{
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    background-image: url(img/defaultDP.png);
+    background-size: 100%;
+    border-radius: 50%;
+}
