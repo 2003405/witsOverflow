@@ -19,100 +19,122 @@
     </head>
     <body>
 
-        <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light d-flex justify-content-between p-3 shadow-sm">
+            <div class="d-flex p-1">
 
-            <div class="account-container d-flex flex-column">
-                <div class="row">
-                        <h2>Account</h2>
-                        <div class="d-flex">
-                                <!--Add in avatar and buttons-->
-                                <div class="wrapper">
-                               <!--     <img class="img-dp" src="img/defaultDP.png" alt="displayPicture"> -->
-                               <div class="img-dp"></div>
-                                </div>
-                                
-                        </div>
+                <a class="fa fa-navicon"></a>
+                
+                <a class="navbar-brand">witsOverflow</a>
+
+                <div class="navbar-nav d-flex flex-row">
+                    <a class="nav-item nav-link active" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">Features</a>
+                    <a class="nav-item nav-link" href="#">Pricing</a>
+                    <a class="nav-item nav-link disabled" href="account.html">Account</a>
                 </div>
-
-                <div class="row d-flex flex-row justify-content-between">
-
-                    <div class="form-group">
-
-                        <label for="dname">Display Name:</label>
-                        <input type="text" class="form-control" id="dname">
-                    
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="name">Full Name:</label>
-                        <input type="password" class="form-control" id="name">
-
-                    </div>
-                    
-                </div>
-
-                <div class="row d-flex flex-row justify-content-between">
-
-                    <div class="form-group">
-
-                        <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email">
-                    
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="phone">Phone number:</label>
-                        <input type="text" class="form-control" id="phone">
-
-                    </div>
-
-                    
-                </div>
-
-                <div class="row d-flex flex-row justify-content-between">
-
-                    <div class="form-group">
-
-                        <label for="password">Password:</label>
-                        <input type="text" class="form-control" id="password">
-                    
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="confirm">Confirm password:</label>
-                        <input type="text" class="form-control" id="confirm">
-
-                    </div>
-
-                    
-                </div>
-
-                <div class="row d-flex">
-
-                    <p> <strong>Delete account</strong> </p>
-                    <div class="d-flex justify-content-between delete-account">
-                        <p>By deleting your account you will lose all your data</p>
-                        <a href="#">Delete account...</a>
-                    </div>
-
-                </div>
-
-                <div class="row d-flex flex-row-reverse">
-
-                    <a class="custom-btn">Save changes</a>
-
-                    <div class="row d-flex flex-row">
-                        <a class="custom-btn" href="index.html">Back</a>
-                    </div>
-
-                </div>
-
-
 
             </div>
+        
+
+        </nav>
+
+
+        <div class="account-container d-flex flex-column">
+            <div class="row">
+                    <h2>Account</h2>
+
+                    <div class="d-flex flex-column">
+
+                        <h5 class="avatar-header">
+                            Avatar
+                        </h5>
+                            
+                        <div class="img-container d-flex">
+
+                            <img class="user-avatar" src="/img/defaultDP.png">
+                            <a class="upload-button">Upload</a>
+                            <a class="remove-button">Remove</a>
+                
+                        </div>
+                            
+                    </div>
+            </div>
+
+            <div class="row d-flex flex-row justify-content-between">
+
+                <div class="form-group">
+
+                    <label for="dname">Display Name:</label>
+                    <input type="text" class="form-control" id="dname">
+                
+                </div>
+
+                <div class="form-group">
+
+                    <label for="name">Full Name:</label>
+                    <input type="password" class="form-control" id="name">
+
+                </div>
+                
+            </div>
+
+            <div class="row d-flex flex-row justify-content-between">
+
+                <div class="form-group">
+
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email">
+                
+                </div>
+
+                <div class="form-group">
+
+                    <label for="phone">Phone number:</label>
+                    <input type="text" class="form-control" id="phone">
+
+                </div>
+
+                
+            </div>
+
+            <div class="row d-flex flex-row justify-content-between">
+
+                <div class="form-group">
+
+                    <label for="password">Password:</label>
+                    <input type="text" class="form-control" id="password">
+                
+                </div>
+
+                <div class="form-group">
+
+                    <label for="confirm">Confirm password:</label>
+                    <input type="text" class="form-control" id="confirm">
+
+                </div>
+
+                
+            </div>
+
+            <div class="row d-flex">
+
+                <p> <strong>Delete account</strong> </p>
+                <div class="d-flex justify-content-between delete-account">
+                    <p>By deleting your account you will lose all your data</p>
+                    <a href="#">Delete account...</a>
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-between">
+
+                <a class="custom-btn" href="index.html">Back</a>
+
+                <a class="custom-btn">Save changes</a>
+
+            </div>
+
+
 
         </div>
 
