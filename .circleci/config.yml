@@ -1,14 +1,56 @@
-orbs: # declare what orbs we are going to use
-  node: circleci/node@2.0.2 # the node orb provides common node-related configuration
+version: 2.1
 
-version: 2.1 # using 2.1 provides access to orbs and other features
+orbs:
+  coveralls: coveralls/coveralls@1.0.5
+  node: circleci/node@1.1.6
+
+jobs:
+  build-1:
+    executor:
+      name: node/default
+
+    steps:
+      - checkout
+
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: make test-coverage-1
+
+      - coveralls/upload:
+          parallel: true
+          flag_name: Test 1
+          verbose: true
+
+  build-2:
+    executor:
+      name: node/default
+
+    steps:
+      - checkout
+
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: make test-coverage-2
+
+      - coveralls/upload:
+          parallel: true
+          flag_name: Test 2
+          verbose: true
+
+  done:
+    executor:
+      name: node/default
+
+    steps:
+      - coveralls/upload:
+          parallel_finished: true
 
 workflows:
-  matrix-tests:
+  test_parallel_then_upload:
     jobs:
-      - node/test:
-          version: 13.11.0
-      - node/test:
-          version: 12.16.0
-      - node/test:
-          version: 10.19.0
+      - build-1
+      - build-2
+      - done:
+          requires: [build-1, build-2]
