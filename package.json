@@ -1,10 +1,11 @@
 { 
     "name": "test-project",
-    "scripts": {
-      "test:coverage": "jest --coverage",
-      "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+    
+      "scripts": {
+        "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --reporter=html mocha src/test/*.js --timeout 10000 -c --require @babel/register --exit"
       },
-      "install": "npm install coveralls --save-dev"
+      "coverage": "nyc report --reporter=text-lcov | coveralls"
+    
   }
   
   
