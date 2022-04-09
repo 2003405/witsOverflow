@@ -1,4 +1,11 @@
 { 
-    "name": "test-project"
+    "name": "test-project",
+    "scripts": {
+      "test": "nyc mocha functions.js --exit",
+      "start": "node functions.js",
+      "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+      "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=lcov"
+      }
   }
+  
   
