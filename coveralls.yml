@@ -1,1 +1,3 @@
 repo_token: ji1gRAGBNRC4OiSHhj1QVCrNGUmfcvb6i
+script:
+  - npm run test: coveralls
