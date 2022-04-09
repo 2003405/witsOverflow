@@ -1,4 +1,9 @@
 { 
-    "name": "test-project"
+    "name": "test-project",
+    "scripts": {
+      "test:coverage": "jest --coverage",
+      "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+      }
   }
+  
   
