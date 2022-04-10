@@ -13,3 +13,29 @@ workflows:
           version: 12.16.0
       - node/test:
           version: 10.19.0
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16.0
+    steps:
+      - checkout
+      - restore_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+        name: install-npm-dependencies
+        command: npm install
+      - save_cache:
+        key: dependency-cache-{{ checksum "package.json" }}
+        paths:
+          - ./node_modules
+      - run: # run tests
+        name: test
+        command: npm run test:unit
+      - run: # run code coverage report
+        name: code-coverage
+        command: npm run coveralls
+      - run: # run build
+        name: Build
+        command: npm run build
+      # - coveralls/upload
