@@ -1,9 +1,10 @@
 { 
     "name": "test-project",
     "scripts": {
-      "test:coverage": "jest --coverage",
-      "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
-      }
+      "test:unit": "nyc vue-cli-service test:unit",
+      "coverage": "nyc npm run test:unit",
+      "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    }
   }
   
   
