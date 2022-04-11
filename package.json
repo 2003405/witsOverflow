@@ -1,9 +1,8 @@
 { 
     "name": "test-project",
-    "scripts": {
-      "test:unit": "nyc vue-cli-service test:unit",
-      "coverage": "nyc npm run test:unit",
-      "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "jest": {
+      "coverageDirectory": "./coverage/",
+      "collectCoverage": true
     }
   }
   
