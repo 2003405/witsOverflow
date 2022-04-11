@@ -1,11 +1,8 @@
 { 
     "name": "test-project",
     "jest": {
-      "collectCoverage": true,
-      "coverageReporters": ["json", "html"]
-    },
-    "scripts": {
-      "test": "jest  --coverage"
+      "coverageDirectory": "./coverage/",
+      "collectCoverage": true
     }
   }
   
