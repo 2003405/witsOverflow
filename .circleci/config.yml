@@ -1,21 +1,41 @@
-orbs: # declare what orbs we are going to use
-  codecov: codecov/codecov@3.1.1
-  node: circleci/node@2.0.2 # the node orb provides common node-related configuration
+#orbs: # declare what orbs we are going to use
+#  codecov: codecov/codecov@3.1.1
+#  node: circleci/node@2.0.2 # the node orb provides common node-related configuration
 
-version: 2.1 # using 2.1 provides access to orbs and other features
+#version: 2.1 # using 2.1 provides access to orbs and other features
 
-workflows:
-  matrix-tests:
-    jobs:
-      - node/test:
-          version: 13.11.0
-      - node/test:
-          version: 12.16.0
-      - node/test:
-          version: 10.19.0
-  upload-to-codecov:
-    jobs:
-      - node/test:
-          post-steps:
-            - codecov/upload
+#workflows:
+ # matrix-tests:
+  #  jobs:
+   #   - node/test:
+    #      version: 13.11.0
+     # - node/test:
+      #    version: 12.16.0
+     # - node/test:
+     #     version: 10.19.0
+  #upload-to-codecov:
+  #  jobs:
+   #   - node/test:
+    #      post-steps:
+     #       - codecov/upload
+
+#update the CircleCI config file version to 2.1 and add the orbs we want
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.2
+
+#insert the command “upload” from the orb and provide the file of the report
+  #and the token that Codecov generated our test job.
+  Run-With-Node:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: install and run tests
+          command: |
+            yarn install && yarn test
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          token: a7a5df63-codcov-token-4278vh38
 
