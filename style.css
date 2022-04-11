@@ -16,6 +16,11 @@ a:hover{
 .btn-login{
     margin-right: 12px;
     margin-left: 12px;
+    border-radius: 40px;
+}
+
+.btn-signup{
+    border-radius: 40px;
 }
 
 .navbar-nav a:hover{
@@ -46,10 +51,12 @@ a.btn-login:hover, a.btn-signup:hover{
 
 .account-container{
     width: 75%;
-    height: 90%;
     border-radius: 15px;
     box-shadow: 0px 0px 14px -5px rgba(76, 75, 75, 0.75);
     padding: 35px;
+    display: flex;
+    margin: 60px auto;
+
 }
 
 .account-container .row:not(:first-child), .account-container .row:not(:last-child){
@@ -71,12 +78,6 @@ a.btn-login:hover, a.btn-signup:hover{
     margin-bottom: 8px;
 }
 
-.container-fluid{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .form-group{
     width: 440px;
@@ -92,7 +93,7 @@ a.btn-login:hover, a.btn-signup:hover{
     height: 45px;
     color: white;
     font-weight: 700;
-    background: #1aa3ff;
+    background: #0d6efd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,8 +128,8 @@ a.btn-login:hover, a.btn-signup:hover{
     justify-content: center;
     align-items: center;
     color: hsl(210,8%,45%);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     text-align: center;
     width: 90px;
 }
@@ -139,7 +140,7 @@ a.btn-login:hover, a.btn-signup:hover{
     justify-content: center;
     align-items: center;
     background: hsl(140,40%,55%);
-    border-radius: 4px;
+    border-radius: 6px;
     text-align: center;
     width: 90px;
 }
@@ -174,4 +175,43 @@ a.btn-login:hover, a.btn-signup:hover{
 .btn-ask-question{
     background: #0d6efd;
     color: white;
+}
+
+.avatar-header{
+    margin-top: 30px;
+}
+
+.user-avatar{
+    width: 85px;
+    height: 85px;
+    border: 1px rgb(201, 204, 207) solid;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.img-container{
+    align-items: center;
+}
+
+.img-container a{
+    margin-left: 25px;
+    transition: .2s;
+
+}
+
+.upload-button, .remove-button{
+    border: 1px solid #ced4da;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.img-container a:hover{
+    border: 1px solid #0d6efd;
+    background: #0d6efd
 }
