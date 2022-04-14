@@ -21,25 +21,33 @@
 
         <nav class="navbar navbar-light bg-light d-flex justify-content-between p-3 shadow-sm">
             <div class="d-flex p-1">
+
                 <a class="fa fa-navicon"></a>
+                
                 <a class="navbar-brand">witsOverflow</a>
-                <p style="font-family:Courier; font-size: 20px; position: relative;left:300px; top:10px;">Ask Question</p>
+
             </div>
+        
 
         </nav>
-        <div class="input-group">
-            <!-- title and question input -->
-            <form>
-                <p style="font-family:Courier; font-size: 15px; position: relative;left:300px; top:10px;">Title:</p>
-                <textarea class="title" type="text" id="title" placeholder="Type title..."></textarea>
-                <p style="font-family:Courier; font-size: 15px; position: relative;left:300px; top:10px;">Question:</p>
-                <textarea class="question" type="text" id="question" placeholder="Type Question..."></textarea>
-            </form>
-            <span class="input-group-btn" >
-         </span>
-        </div>
-            <div class="row d-flex flex-row-reverse">
-                    <a class="custom-btn">Post Question</a>
+
+
+        <div class="account-container d-flex flex-column">
+            <div class="row">
+                    <h2>Ask Question</h2>
             </div>
+                <div class="input-group">
+                <!-- title and question input -->
+                    <form>
+                        <p style="font-family:Courier; font-size: 15px; position: relative;left:20px; top:10px;">Title:</p>
+                        <textarea class="title" type="text" id="title" placeholder="Type Title..."></textarea>
+                        <p style="font-family:Courier; font-size: 15px; position: relative;left:20px; top:10px;">Question:</p>
+                        <textarea class="question" type="text" id="question" placeholder="Type Question..."></textarea>
+                    </form>
+               <span class="input-group-btn" >
+             </span>
+            </div>
+                <a class="post-question-btn">Post Question</a>
+        </div>
     </body>
 </html>
