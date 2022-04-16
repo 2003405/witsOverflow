@@ -1,17 +1,16 @@
 const env = require('./env');
-const express = require('express'); //serve files to front end
-const { Prohairesis } = require("prohairesis"); //for mysql
-const bodyParser = require("body-parser"); //allows to interpret as json
-
+const express = require('express');
+const morgan = require("morgan"); 
+const { Prohairesis } = require("prohairesis")
+const bodyParser = require("body-parser");
 const encoder = bodyParser.urlencoded();
 const mysql = require("mysql");
-//const req = require('express/lib/request');
+
 const app = express(); 
 app.use("/assets", express.static("assets"));
 const port = process.env.PORT || 8080;
-
-//const mySQLstring = process.env.CLEARDB_DATABASE_URL;
-//const database = new Prohairesis(mySQLstring)
+const mySQLstring = 'mysql://b485d7053c318c:8dcd5143@eu-cdbr-west-02.cleardb.net/heroku_9c5fd54c0bf4617?reconnect=true'
+const database = new Prohairesis(mySQLstring)
 
 const connection = mysql.createConnection({
     host: "eu-cdbr-west-02.cleardb.net",
@@ -38,13 +37,14 @@ app
     connection.query("select * from register_user where Username = ? and UserPassword = ?", [Username,UserPassword], function(error, results, fields){
         if(results.length > 0){
             res.redirect("/index");
-        } else{
+        }else{
             res.redirect("/");
         }
         res.end();
     })
 })
 .listen(port, () => console.log(`Server listening on port ${env.port}`));
+
 
 //login is successful
 app.get("/index", function(req,res){
